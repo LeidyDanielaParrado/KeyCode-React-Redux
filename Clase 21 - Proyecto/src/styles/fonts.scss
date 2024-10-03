@@ -26,22 +26,6 @@ $font-weight-bold: 700;
 
 //  Fonts
 
-@font-face {
-    font-family: Centra;
-    src: url("../assets/fonts/CentraNo2-Bold.ttf");
-    font-weight: $font-weight-bold;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
 
-@font-face {
-    font-family: Centra;
-    src: url("../assets/fonts/CentraNo2-Medium.ttf");
-    font-weight: $font-weight-medium;
-}
-
-@font-face {
-    font-family: Centra;
-    src: url("../assets/fonts/CentraNo2-Book.ttf");
-    font-weight: 400;
-}
-
-$font-family: "Centra", sans-serif;
+$font-family: "Montserrat", sans-serif;

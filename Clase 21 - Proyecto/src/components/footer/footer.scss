@@ -1,0 +1,11 @@
+@import "../../styles/autoload.scss";
+
+.footer {
+    background-color: $dark-color;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: $contrast-color-50;
+    padding: 20px;
+    margin-top: 20px;
+}

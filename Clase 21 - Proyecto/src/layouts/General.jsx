@@ -1,14 +1,17 @@
 import { Outlet } from "react-router-dom";
-import PropTypes from "prop-types";
+import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
 
 const General = () => {
     return (
-        <div>
-            <Outlet />
-        </div>
+        <>
+            <Header />
+            <main>
+                <Outlet />
+            </main>
+            <Footer />
+        </>
     );
 };
-
-General.propTypes = {};
 
 export default General;

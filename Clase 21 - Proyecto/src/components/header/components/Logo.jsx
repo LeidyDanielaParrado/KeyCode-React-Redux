@@ -1,17 +1,27 @@
 import PropTypes from "prop-types";
+import { NavbarBrand, NavbarContent, NavbarMenuToggle } from "@nextui-org/react";
 
-const Logo = ({ children, img }) => {
+import "./logo.scss";
+
+const Logo = ({ children, isMenuOpen, img }) => {
     return (
-        <figure className="logo">
-            <img src={img} alt="Logo de zombie store" />
+        <NavbarContent>
+            <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="sm:hidden" />
 
-            <figcaption>{children}</figcaption>
-        </figure>
+            <NavbarBrand>
+                <figure className="logo">
+                    <img src={img} alt="Logo de zombie store" />
+
+                    <figcaption>{children}</figcaption>
+                </figure>
+            </NavbarBrand>
+        </NavbarContent>
     );
 };
 
 Logo.propTypes = {
     children: PropTypes.node,
+    isMenuOpen: PropTypes.bool.isRequired,
     img: PropTypes.string.isRequired,
 };
 

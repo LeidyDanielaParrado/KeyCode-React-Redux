@@ -1,39 +1,30 @@
-import React from "react";
-import PropTypes from "prop-types";
+import { useState } from "react";
+import { Navbar } from "@nextui-org/react";
 
-import logo from "../../assets/icons/Logo.svg";
+import "./header.scss";
+
+import imgLogo from "../../assets/icons/Logo.svg";
 import Logo from "./components/Logo";
 import Nav from "./components/Nav";
 
 const Header = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const arrayRoutes = ["Home", "Store", "About"];
+    const menuItems = [
+        { uid: "/", name: "Inicio" },
+        { uid: "/store", name: "Tienda" },
+        { uid: "/about", name: "Información" },
+    ];
 
     return (
-        <header className="header">
-            <Logo img={logo}>
-                Zombie <spam>Store</spam>
+        <Navbar onMenuOpenChange={setIsMenuOpen} className="header" style={{ backgroundColor: "black" }}>
+            <Logo isMenuOpen={isMenuOpen} img={imgLogo}>
+                Zombie <span>Store</span>
             </Logo>
 
-            <Nav arrayRoutes={arrayRoutes} />
-
-            <nav className="nav">
-                <ul>
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/store">Store</a>
-                    </li>
-                    <li>
-                        <a href="/about">About</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+            <Nav menuItems={menuItems} />
+        </Navbar>
     );
 };
-
-Header.propTypes = {};
 
 export default Header;
