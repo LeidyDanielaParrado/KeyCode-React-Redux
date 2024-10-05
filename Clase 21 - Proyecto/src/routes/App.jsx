@@ -1,13 +1,21 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import General from "../layouts/General";
+import StoreLayout from "../layouts/StoreLayout";
 
+/* Páginas generales */
 import Home from "../pages/Home";
-import Store from "../pages/Store";
 import About from "../pages/About";
 import NotFound from "../pages/NotFound";
 
+/* Páginas de la tienda */
+import Store from "../pages/store/Store";
+import Foods from "../pages/store/Foods";
+import Location from "../pages/store/Location";
+import Objects from "../pages/store/Objects";
+
 function App() {
+
     return (
         <BrowserRouter>
             <Routes>
@@ -16,11 +24,11 @@ function App() {
                     <Route path="about" element={<About />} />
                 </Route>
 
-                <Route path="/store" element={<General />}>
+                <Route path="/store" element={<StoreLayout />}>
                     <Route index element={<Store />} />
-                    <Route path="foods" element={<Store />} />
-                    <Route path="locations" element={<Store />} />
-                    <Route path="objects" element={<About />} />
+                    <Route path="foods" element={<Foods />} />
+                    <Route path="locations" element={<Location />} />
+                    <Route path="objects" element={<Objects />} />
                 </Route>
 
                 <Route path="*" element={<NotFound />} />

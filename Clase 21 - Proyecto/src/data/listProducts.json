@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Orange",
+        "category": "product",
+        "img": "/images/fruit-1.jpeg",
+        "description": "Orange is a fruit.",
+        "price": "$5.50"
+    },
+    {
+        "title": "Orange",
+        "category": "product",
+        "img": "/images/fruit-1.jpeg",
+        "description": "Orange is a fruit.",
+        "price": "$5.50"
+    },
+    {
+        "title": "Orange",
+        "category": "food",
+        "img": "/images/fruit-1.jpeg",
+        "description": "Orange is a fruit.",
+        "price": "$5.50"
+    },
+    {
+        "title": "Orange",
+        "category": "food",
+        "img": "/images/fruit-1.jpeg",
+        "description": "Orange is a fruit.",
+        "price": "$5.50"
+    },
+    {
+        "title": "Orange",
+        "category": "food",
+        "img": "/images/fruit-1.jpeg",
+        "description": "Orange is a fruit.",
+        "price": "$5.50"
+    },
+    {
+        "title": "Orange",
+        "category": "location",
+        "img": "/images/fruit-1.jpeg",
+        "description": "Orange is a fruit.",
+        "price": "$5.50"
+    }
+]

@@ -1,0 +1,116 @@
+@import "../styles/autoload.scss";
+
+.container-bg {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    background-image: url("https://images.unsplash.com/photo-1612838320302-4b3b3b3b3b3b");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgb(25, 25, 25);
+        background: linear-gradient(
+            90deg,
+            rgba(25, 25, 25, 0.3936781609195402) 0%,
+            rgba(10, 10, 10, 0.5373563218390804) 19%,
+            rgba(0, 0, 0, 0.6580459770114943) 35%,
+            rgba(59, 59, 59, 0.6580459770114943) 52%,
+            rgba(255, 255, 255, 0) 100%
+        );
+    }
+
+    .container-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        max-width: $max-width;
+        padding: 40px;
+        z-index: 1;
+
+        @include responsive {
+            position: relative;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        h1 {
+            font-size: $font-size-xxl;
+            font-weight: $font-weight-bold;
+            color: $contrast-color-50;
+            text-align: center;
+
+            @include responsive {
+                width: 70%;
+                font-size: $font-size-xxxxl;
+                text-align: start;
+            }
+        }
+
+        .logo {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background-color: $light-color-transparent;
+            width: 310px;
+            height: 310px;
+            border-radius: 50%;
+            border: 1px solid $light-color-800;
+
+            img {
+                width: 180px;
+                height: auto;
+            }
+
+            @include responsive {
+                position: absolute;
+                right: 15%;
+            }
+        }
+
+        p {
+            font-size: $font-size-lg;
+            font-weight: $font-weight-regular;
+            color: $contrast-color-50;
+            text-align: center;
+            width: 100%;
+
+            @include responsive {
+                text-align: start;
+                width: 50%;
+            }
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            font-size: $font-size-lg;
+            font-weight: $font-weight-bold;
+            color: $contrast-color-50;
+            background-color: $primary-color;
+            border-radius: 50px;
+            padding: 10px 20px;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: $primary-color-700;
+                transition: 0.3s;
+            }
+        }
+    }
+}

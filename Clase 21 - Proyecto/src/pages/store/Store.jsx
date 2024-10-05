@@ -49,12 +49,12 @@ const Store = () => {
     ];
 
     const productsFood = products.filter((item) => item.category === "food");
+    const productsObject = products.filter((item) => item.category === "product");
+    const productsLocation = products.filter((item) => item.category === "location");
 
     console.log(productsFood);
-
-    const filterProducts = (category) => {
-        return products.filter((item) => item.category === category);
-    };
+    console.log(productsObject);
+    console.log(productsLocation);
 
     const elementsProducts = products.map((item, index) => {
         return (
@@ -79,23 +79,6 @@ const Store = () => {
 
     return (
         <>
-            <section className="navStore-buttons">
-                <button>
-                    <img src="https://via.placeholder.com/150" alt="food" />
-                    <p>Comida</p>
-                </button>
-
-                <button>
-                    <img src="https://via.placeholder.com/150" alt="food" />
-                    <p>Objetos</p>
-                </button>
-
-                <button>
-                    <img src="https://via.placeholder.com/150" alt="food" />
-                    <p>Ubicaciones</p>
-                </button>
-            </section>
-
             <section className="section-list">
                 <article className="container-list">{elementsProducts}</article>
             </section>
