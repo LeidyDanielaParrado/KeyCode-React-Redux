@@ -1,19 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import { useContext } from "react";
 
+import ListGenericProducts from "../../components/listGenericProducts/ListGenericProducts";
+import { ListProductsContext } from "../../context/ListProductsContext";
 
 const Location = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+    const listProducts = useContext(ListProductsContext);
+    return <ListGenericProducts listProducts={listProducts} filter="location" />;
 };
-
-
-Location.propTypes = {
-
-};
-
 
 export default Location;

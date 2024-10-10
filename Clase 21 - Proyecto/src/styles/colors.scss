@@ -63,7 +63,7 @@ $dark-color-800: #514742;
 $dark-color-900: #483e3b;
 $dark-color-950: $dark-color;
 $dark-color-transparent: #342c2ada;
-$dark-color-transparent-low: #342c2a36;
+$dark-color-transparent-low: #342c2aa7;
 
 // CONTRAST
 $contrast-color: #f2e0d0;
@@ -131,8 +131,8 @@ $danger-color-transparent: #4b0405a2;
 
 // ---------- Boxshadow -----------
 
-$box-shadow: 0 rem(4px) rem(30px) $dark-color-transparent;
-$box-shadow-hover: 0 rem(6px) rem(20px) $dark-color-transparent-low;
+$box-shadow: 0 rem(6px) rem(20px) $dark-color-transparent-low;
+$box-shadow-hover: 0 rem(4px) rem(30px) $dark-color-transparent;
 
 /* Circular Gradients in function of variables */
 

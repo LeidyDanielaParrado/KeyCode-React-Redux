@@ -1,15 +1,11 @@
 import { useContext } from "react";
-import PropTypes from "prop-types";
 
+import ListGenericProducts from "../../components/listGenericProducts/ListGenericProducts";
 import { ListProductsContext } from "../../context/ListProductsContext";
 
 const Foods = () => {
     const listProducts = useContext(ListProductsContext);
-    console.log(listProducts);
-
-    return <div>Hola soy un nuevo componente</div>;
+    return <ListGenericProducts listProducts={listProducts} filter="food" />;
 };
-
-Foods.propTypes = {};
 
 export default Foods;

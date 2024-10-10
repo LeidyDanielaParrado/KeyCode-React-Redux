@@ -13,6 +13,7 @@ import Store from "../pages/store/Store";
 import Foods from "../pages/store/Foods";
 import Location from "../pages/store/Location";
 import Objects from "../pages/store/Objects";
+import Shop from "../pages/shop/Shop";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
                     <Route path="foods" element={<Foods />} />
                     <Route path="locations" element={<Location />} />
                     <Route path="objects" element={<Objects />} />
+                    <Route path="shop" element={<Shop />} />
                 </Route>
 
                 <Route path="*" element={<NotFound />} />

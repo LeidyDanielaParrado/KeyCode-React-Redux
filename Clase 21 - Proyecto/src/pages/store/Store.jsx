@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 
 const Store = () => {
@@ -52,10 +51,6 @@ const Store = () => {
     const productsObject = products.filter((item) => item.category === "product");
     const productsLocation = products.filter((item) => item.category === "location");
 
-    console.log(productsFood);
-    console.log(productsObject);
-    console.log(productsLocation);
-
     const elementsProducts = products.map((item, index) => {
         return (
             <Card shadow="sm" key={index} isPressable onPress={() => console.log("item pressed")}>
@@ -78,11 +73,9 @@ const Store = () => {
     });
 
     return (
-        <>
-            <section className="section-list">
-                <article className="container-list">{elementsProducts}</article>
-            </section>
-        </>
+        <section className="section-list">
+            <article className="container-list">{elementsProducts}</article>
+        </section>
     );
 };
 
