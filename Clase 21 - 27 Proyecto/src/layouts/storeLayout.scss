@@ -1,0 +1,141 @@
+@import "../styles/autoload.scss";
+
+.store_layout {
+    @include responsive {
+        padding-left: 160px;
+    }
+
+    .navStore-buttons {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 80%;
+        max-width: 800px;
+        background-color: $dark-color-950;
+        box-shadow: $box-shadow;
+        border-radius: 50px;
+
+        padding: 10px;
+        transition: 0.2s;
+        z-index: 99;
+
+        @include responsive {
+            overflow: hidden;
+            bottom: auto;
+            left: 0;
+            transform: translate(0, 0);
+            border-radius: 0 50px 50px 0;
+            width: auto;
+            padding: 0;
+        }
+
+        &:hover {
+            transition: 0.2s;
+            box-shadow: $box-shadow-hover;
+        }
+
+        div {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            width: 100%;
+            padding: 10px;
+
+            @include responsive {
+                gap: 30px;
+                flex-direction: column;
+                padding: 0;
+            }
+        }
+
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            width: 120px;
+
+            @include responsive {
+                padding: 15px;
+                padding-left: 20px;
+            }
+
+            img {
+                position: absolute;
+                bottom: calc(100% - 5px);
+                width: 60px;
+                height: auto;
+
+                border-radius: 50%;
+                border: 2px solid $contrast-color-800;
+
+                @include responsive {
+                    position: initial;
+                }
+            }
+
+            p {
+                color: $contrast-color-50;
+            }
+        }
+
+        a.select {
+            background-color: $primary-color;
+            border-radius: 50px;
+
+            @include responsive {
+                border-radius: 0;
+            }
+
+            img {
+                border: 2px solid $primary-color;
+            }
+
+            p {
+                color: $dark-color-950;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .btn_shop {
+        position: fixed;
+        top: 100px;
+        right: 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 80px;
+        height: 60px;
+        background-color: $dark-color-950;
+        box-shadow: $box-shadow;
+        border-radius: 0 0 15px 15px;
+        padding-bottom: 60px;
+        transition: 0.2s;
+        z-index: 99;
+
+        &:hover {
+            transition: 0.2s;
+            box-shadow: $box-shadow-hover;
+        }
+
+        p {
+            text-align: center;
+            color: $contrast-color-50;
+            font-size: 0.8rem;
+            padding-bottom: 10px;
+        }
+    }
+}

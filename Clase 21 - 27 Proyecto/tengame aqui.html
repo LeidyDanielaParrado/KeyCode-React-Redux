@@ -1,0 +1,9 @@
+<div className="cart-price">
+    {/* Formatear el precio del producto para que tenga los separadores de miles pero sin decimales*/}
+    {item.qty} x $
+    {item.price.toLocaleString("es-CO", {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0,
+    })}
+    COP
+</div>
